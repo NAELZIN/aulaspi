@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class evento {
+public class Evento {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -56,6 +56,12 @@ public class evento {
 
 	public void setHorario(String horario) {
 		this.horario = horario;
+	}
+
+	@Override
+	public String toString() {
+		return "evento [id=" + id + ", nome=" + nome + ", local=" + local + ", data=" + data + ", horario=" + horario
+				+ "]";
 	}
 
 }
