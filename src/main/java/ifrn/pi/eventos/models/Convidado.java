@@ -1,10 +1,12 @@
 package ifrn.pi.eventos.models;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
+@Entity
 public class Convidado {
 	
 	@Id
@@ -13,7 +15,7 @@ public class Convidado {
 	private String nome;
 	private String rg;
 	
-	@ManyToMany
+	@ManyToOne
 	private Evento evento;
 
 	public Long getId() {
