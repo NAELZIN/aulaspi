@@ -4,12 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class indexController {
+public class IndexController {
 	
 	@RequestMapping("/")
 	public String index() {
-		System.out.println("chamou o metodo index");
+		System.out.println("Chamou o método index");
 		return "redirect:/eventos";
 	}
-
 }
