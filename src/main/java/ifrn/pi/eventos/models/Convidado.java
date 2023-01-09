@@ -1,21 +1,19 @@
 package ifrn.pi.eventos.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
-@Entity
 public class Convidado {
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
 	private String rg;
-
-	@ManyToOne
+	
+	@ManyToMany
 	private Evento evento;
 
 	public Long getId() {
@@ -54,5 +52,6 @@ public class Convidado {
 	public String toString() {
 		return "Convidado [id=" + id + ", nome=" + nome + ", rg=" + rg + ", evento=" + evento + "]";
 	}
-
+	
+	
 }
